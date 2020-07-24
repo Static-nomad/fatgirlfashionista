@@ -5,3 +5,9 @@
 #des {
   background: pink;
 }
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+#main {
+    background: purple;
+}
