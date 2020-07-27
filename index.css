@@ -1,13 +1,14 @@
 
 #about, #reason {
-  color: blueviolet;
+font-family: "Lobster", sans-serif;
+background-color: cyan;
+color: blue;
 }
 #des {
-  background: pink;
+font-family: "Lobster", sans-serif;
+background-color: cyan;
+color: blue;
 }
 .selector-for-some-widget {
   box-sizing: content-box;
-}
-#main {
-    background: purple;
 }
