@@ -12,3 +12,9 @@ color: blue;
 .selector-for-some-widget {
   box-sizing: content-box;
 }
+#icon, .menu {
+    color: blue;
+}
+#fgf {
+    background-color: !important teal;
+}
