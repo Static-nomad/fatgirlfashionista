@@ -18,6 +18,10 @@ color: blue;
 #fgf {
     background-color: !important teal;
 }
+
+.pagination {
+   justify-content: center;
+}
 /* Pagination links */
 .pagination a {
   color: black;
@@ -25,6 +29,7 @@ color: blue;
   padding: 8px 16px;
   text-decoration: none;
   transition: background-color .3s;
+   justify-content: center;
 }
 
 /* Style the active/current link */
