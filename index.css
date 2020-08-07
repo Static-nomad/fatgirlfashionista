@@ -38,5 +38,16 @@ color: blue;
   color: #FF007Fk;
 }
 
-/* Add a grey background color on mouse-over */
+/* Add a black background color on mouse-over */
 .pagination a:hover:not(.active) {background-color: black;}
+
+
+/* Change Card color */
+
+.card-body {
+     background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+
+}
