@@ -48,6 +48,11 @@ color: blue;
      background: linear-gradient(
       53deg,
       #ccfffc,
-      #ffcccf
+      #ffcccf;)
 
 }
+
+/* Remove bullets from list*/
+ ul {
+  list-style-type: none;
+ }
