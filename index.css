@@ -56,3 +56,9 @@ color: blue;
  ul {
   list-style-type: none;
  }
+
+/* Outline sidebar  */
+#mySidebar {
+  border: 7px solid #9A0A35;
+ 
+}
