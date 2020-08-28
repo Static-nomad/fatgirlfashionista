@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="index.js">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
 body,h1,h2,h3,h5,h6 {font-family: "Lobster", sans-serif;
@@ -37,6 +38,7 @@ a:hover {
     <a class="navbar-brand" id="top" href="index.html">Fat Girl Fashionista</a>
   </div>
 </nav>
+
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-cyan w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
@@ -72,6 +74,14 @@ a:hover {
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-teal" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
     <h1 class="text-center"><b>Get Your Style On!</b></h1>
+ 
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('onesign')"> $ (0-50)</button>
+  <button class="btn" onclick="filterSelection('twosigns')"> $$ (50-100)</button>
+  <button class="btn" onclick="filterSelection('threesigns')"> $$$ (100-150)</button>
+  <button class="btn" onclick="filterSelection('threesigns')"> $$$$ (150+)</button>
+</div>
     <div class="dropdown w3-section w3-bottombar w3-padding-16 text-center">
     
    
@@ -84,12 +94,13 @@ a:hover {
   </div>
     </div>
     </div>
+    
   </header>
 
   <!-- First Photo Grid-->
    <div class="container ">
   <div class="row ">
-<div class="column twosigns">
+<div class="column onesign">
  <div class="col-lg-3 col-md-4 col-sm-6 pb-5">
  <div class="card h-100"  style="width: 200px">
        <img src="https://cdn.shopify.com/s/files/1/0807/5835/products/EssentialStrappyminidress-pink1042copy_1800x1800.jpg?v=1594742016" alt="Rebdolls" style="height: 220px;" class="card-img-top w3-hover-opacity">
@@ -98,14 +109,15 @@ a:hover {
        <h4 card-title><a href="https://rebdolls.com/"><b><li class="name">Rebdolls</li></b></a></h4>
         <p class="card-text">Style:  Mostly bodycon</p>
         <p class="card-text">Sizes:  Small - 5X</p>
-        <p class="card-text"><li class="">Cost:   $$</li></p>
+        <p class="card-text"><li class="">Cost:   $</li></p>
       </ul>
       </div>
     </div>
 </div>
   </div>
 
-     <div class="col-lg-3 col-md-4 col-sm-6 pb-5 d-flex ">
+<div class="column onesign">
+     <div class="col-lg-3 col-md-4 col-sm-6 pb-5">
      <div class="card h-100 " style="width: 200px">
      <a href="https://www.rue21.com/store/jump/product/Plus-Black-Crochet-Ruffle-Dress/7230-001110-0008179-0001"> <img src="pics/rhierue21.jpg" alt="Rue 21" style="height: 220px" class="card-img-top w3-hover-opacity"></a>
       <div class="d-flex justify-content-center w3-white mt-3 mr-5">
@@ -113,11 +125,15 @@ a:hover {
         <h4  class="card-title text-center"><a href="https://www.rue21.com/store/"><b><li class="name">Rue 21</li></b><a></h4>
         <p class="card-text ">Style:  Teen, Casual</p>
         <p class="card-text">Sizes:  Small - 4X</p>
-        <p class="card-text"><li class="onesign">Cost:       $</li></p>
+        <p class="card-text"><li class="">Cost:       $</li></p>
       </div>
       </div>
     </div>
+</div>
 
+
+
+<div class="column onesign">
      <div class="col-lg-3 col-md-4 col-sm-6 pb-5">
      <div class="card h-100" style="width: 200px">
       <img src="https://mauricesprodatg.scene7.com/is/image/mauricesProdATG/116173_C5426_Back?$large$" alt="Maurice's" style="height: 220px;" class="card-img-top w3-hover-opacity">
@@ -129,7 +145,9 @@ a:hover {
       </div>
      </div>
     </div>
+</div>
 
+    <div class="column onesign">
     <div class="col-lg-3 col-md-4 col-sm-6 pb-5">
      <div class="card h-100" style="width: 200px">
       <img src="https://www.forever21.com/images/1_front_750/00407002-01.jpg" alt="Forever 21" style="height: 220px;" class="card-img-top w3-hover-opacity">
@@ -142,8 +160,9 @@ a:hover {
      </div>
     </div>
   </div>
+  </div>
  
-   </div>
+ </div>
    
   <!-- Second Photo Grid-->
      <div class="container">
@@ -390,6 +409,55 @@ function w3_open() {
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
+}
+
+
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
 }
 </script>
 <!-- Optional JavaScript -->
