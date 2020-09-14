@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<title>Fat Girl Fashionista</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="index.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h5,h6 {font-family: "Lobster", sans-serif;
+background-color: cyan;
+color: blue;
+}
+h4 {
+    color: white;
+}
+a:hover {
+    color: #FF007F; 
+}
+#top {
+    color: #FF007F;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+</style>
+<body class="main">
+
+<nav class="navbar- navbar-expand-lg navbar-light text-center">
+  <div class="container">
+    <a class="navbar-brand" id="top" href="index.html">Fat Girl Fashionista</a>
+  </div>
+</nav>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-cyan w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-pink" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="pics/restaurant.jpg" style="width:55%;" class=""><br><br>
+    <h4 class="text-center"><b>Fat Girl Fashionista</b></h4>
+
+  </div>
+  <div class="w3-bar-block menu">
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-pink"><i class="fa fa-user fa-fw w3-margin-right"></i>About</a>
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-pink "><i class="fa fa-shopping-bag fa-fw w3-margin-right"></i>Clothing</a>
+    <a href="shoes.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-pink"><i class="fa fa-shopping-bag fa-fw w3-margin-right"></i>Shoes</a>
+    <a href="swimwear.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-pink"><i class="fa fa-shopping-bag fa-fw w3-margin-right"></i>Swimwear</a>
+     <a href="lingerie.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-pink"><i class="fa fa-shopping-bag fa-fw w3-margin-right"></i>Lingerie & Hosiery</a>
+  </div>
+  <div class="w3-panel w3-large">
+   <a id="icon" href="https://www.instagram.com/fatgirlfashionista/" >Instagram   <i class="fa fa-instagram w3-hover-opacity" ></i></a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:290px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="pics/front.jpg" style="width:100px;" class="w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-teal" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1 class="text-center"><b>Shoes</b></h1>
+ 
+
+    <div class="dropdown w3-section w3-bottombar w3-padding-16 text-center">
+    
+    
+  </header>
+
+  <!-- First Photo Grid-->
+   <div class="container ">
+  <div class="row ">
+<div class="column onesign">
+ <div class="col-lg-3 col-md-4 col-sm-6 pb-5">
+ <div class="card h-100"  style="width: 200px">
+       <img src="https://cdn.shopify.com/s/files/1/0807/5835/products/EssentialStrappyminidress-pink1042copy_1800x1800.jpg?v=1594742016" alt="Rebdolls" style="height: 220px;" class="card-img-top w3-hover-opacity">
+      <div class="card-body w3-white">
+       <ul id="rebdolls" class=""> 
+       <h4 card-title><a href="https://rebdolls.com/"><b><li class="name">Rebdolls</li></b></a></h4>
+        <p class="card-text">Style:  Mostly bodycon</p>
+        <p class="card-text">Sizes:  Small - 5X</p>
+        <p class="card-text"><li class="">Cost:   $</li></p>
+      </ul>
+      </div>
+    </div>
+</div>
+  </div>
+
+<div class="column twosigns">
+     <div class="col-lg-3 col-md-4 col-sm-6 pb-5">
+     <div class="card h-100 " style="width: 200px">
+     <a href="https://www.rue21.com/store/jump/product/Plus-Black-Crochet-Ruffle-Dress/7230-001110-0008179-0001"> <img src="pics/rhierue21.jpg" alt="Rue 21" style="height: 220px" class="card-img-top w3-hover-opacity"></a>
+      <div class="d-flex justify-content-center w3-white mt-3 mr-5">
+       <ul id="rue21" class=""> 
+        <h4  class="card-title text-center"><a href="https://www.rue21.com/store/"><b><li class="name">Rue 21</li></b><a></h4>
+        <p class="card-text ">Style:  Teen, Casual</p>
+        <p class="card-text">Sizes:  Small - 4X</p>
+        <p class="card-text"><li class="">Cost:       $</li></p>
+      </div>
+      </div>
+    </div>
+</div>
+
+
+
+<div class="column onesign">
+     <div class="col-lg-3 col-md-4 col-sm-6 pb-5">
+     <div class="card h-100" style="width: 200px">
+      <img src="https://mauricesprodatg.scene7.com/is/image/mauricesProdATG/116173_C5426_Back?$large$" alt="Maurice's" style="height: 220px;" class="card-img-top w3-hover-opacity">
+      <div class="card-body text-center w3-white">
+        <h4 card-title><a href="https://www.maurices.com/"><b>Maurice's</b></a></h4>
+        <p class="card-text">Style:  Casual</p>
+        <p class="card-text">Sizes:  0X - 4X</p>
+        <p class="card-text">Cost:   $</p>
+      </div>
+     </div>
+    </div>
+</div>
+
+    <div class="column twosigns">
+    <div class="col-lg-3 col-md-4 col-sm-6 pb-5">
+     <div class="card h-100" style="width: 200px">
+      <img src="https://www.forever21.com/images/1_front_750/00407002-01.jpg" alt="Forever 21" style="height: 220px;" class="card-img-top w3-hover-opacity">
+      <div class="card-body text-center w3-white">
+        <h4 card-title><a href="https://www.forever21.com/"><b>Forever 21</b></a></h4>
+        <p class="card-text">Style:  Teen, Casual, Club</p>
+        <p class="card-text">Sizes:  Small - 3X</p>
+        <p class="card-text">Cost:   $</p>
+      </div>
+     </div>
+    </div>
+  </div>
+  </div>
+ 
+ </div>
+   
+
+
+  </div>
+ 
+   </div>
+
+    </div>
+  <footer>
+
+  <div class="w3-black w3-center w3-padding-24">Coming Soon</div>
+</footer>
+<script src="index.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
